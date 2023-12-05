@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Titanic Survival Prediction</title>
+  </head>
+  <body
+    class="flex items-center justify-center min-h-screen bg-gray-100"
+    style="font-family: 'Roboto Mono', monospace"
+  >
+    <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
+      <div class="container max-w-screen-lg mx-auto">
+        <div>
+          <h2 class="font-semibold text-xl text-gray-600">
+            Titanic Survival Prediction
+          </h2>
+          <p class="text-gray-500 mb-6">Isilah form untuk melihat prediksi.</p>
+
+          <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+              <div class="text-gray-600">
+                <p class="font-medium text-lg">Titanic Disaster</p>
+                <p>
+                  The Titanic disaster remains one of the most infamous maritime
+                  tragedies in history. On April 15, 1912, the luxurious British
+                  passenger liner RMS Titanic, deemed "unsinkable," collided
+                  with an iceberg during its maiden voyage from Southampton to
+                  New York City.
+                </p>
+                <br />
+                <img
+                  class="object-cover rounded-3xl object-center w-full mx-auto bg-gray-300 lg:ml-auto"
+                  alt="hero"
+                  src="https://i2-prod.mirror.co.uk/incoming/article7781764.ece/ALTERNATES/s1168v/Sequence-26Still001.jpg"
+                />
+              </div>
+
+              <div class="lg:col-span-2">
+                <form
+                  action="/predict"
+                  method="POST"
+                  class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5"
+                >
+                  <div class="md:col-span-5">
+                    <label for="sex">Sex</label>
+                    <select
+                      class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      name="sex"
+                      required
+                    >
+                      <option value="" disabled selected>Select Gender</option>
+                      <option value="female">Female</option>
+                      <option value="male">Male</option>
+                    </select>
+                  </div>
+
+                  <div class="md:col-span-5">
+                    <label for="age">Age</label>
+                    <input
+                      type="number"
+                      name="age"
+                      class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      placeholder="Age"
+                      required
+                    />
+                  </div>
+
+                  <div class="md:col-span-3">
+                    <label for="fare">Fare</label>
+                    <input
+                      type="number"
+                      name="fare"
+                      class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      placeholder="Ticket Price"
+                      required
+                    />
+                  </div>
+
+                  <div class="md:col-span-2">
+                    <label for="family_size">Family Size</label>
+                    <input
+                      type="number"
+                      name="family_size"
+                      class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      required
+                      placeholder="Family Size"
+                    />
+                  </div>
+
+                  <div class="md:col-span-5 text-right">
+                    <div class="inline-flex items-end">
+                      <button
+                        type="submit"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >
+                        Predict Survival
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
