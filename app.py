@@ -16,8 +16,6 @@ def home():
     return render_template('index.html')
 
 # Define the route for making predictions
-
-
 @app.route('/predict', methods=['POST'])
 def predict():
     # Get input data from the form
